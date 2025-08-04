@@ -1,0 +1,29 @@
+NETLIFY DEPLOYMENT INSTRUCTIONS
+================================
+
+FILES IN THIS PACKAGE:
+- netlify/ folder (serverless functions for chatbot and contact form)
+- dist/ folder (your built React application)
+- netlify.toml (Netlify configuration)
+- _redirects (URL routing rules)
+- package.json (Node.js dependencies)
+- shared/ folder (database schemas)
+
+HOW TO DEPLOY:
+1. Extract all files from this archive
+2. Go to Netlify dashboard → Your site → Deploys tab
+3. Drag ALL files and folders into the deploy area
+4. Wait for deployment to complete (2-5 minutes)
+
+AFTER DEPLOYMENT:
+- Functions tab will appear in your Netlify dashboard
+- Test environment: https://www.ilove-ai.co.za/.netlify/functions/test-env
+- Should show: {"hasOpenAIKey": true, "hasDatabaseURL": false}
+- Chatbot will work with your OpenAI API key
+
+TROUBLESHOOTING:
+- If Functions tab doesn't appear, the netlify/ folder wasn't uploaded correctly
+- If chatbot still fails, check function logs in Netlify dashboard
+- Environment variables are already configured correctly
+
+Your OpenAI API key setup in Netlify is perfect - this deployment will fix the missing functions issue.
